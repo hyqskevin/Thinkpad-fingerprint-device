@@ -1,17 +1,19 @@
-# Load finger print device in Linux system on Thinkpad
+# finger print device in Linux system on Thinkpad
 
-- both tested on Linuxmint & Arch
-- example in device ID: 138:0090
+- Firstly thanks to the amazing work that nmikhailov done in [Validity90](https://github.com/nmikhailov/Validity90) and Trevisan done in [libfprint](https://github.com/3v1n0/libfprint)
 
-## 1.Check your finger print device
+- The device had both tested on Linuxmint & Arch
+- my example in device ID: 138:0090
+
+## 1.Check your finger print device in terminal
 
 ```bash
 lsusb
 ```
 
-- and show device ID (for me) `Bus xxx Device xxx: ID 138a:0090 Validity Sensors, Inc.`
+- and show device ID (example for me) `Bus xxx Device xxx: ID 138a:0090 Validity Sensors, Inc.`
 
-- here are some integrated fingerprint Reader in [thinkwiki](https://www.thinkwiki.org/wiki/Integrated_Fingerprint_Reader)
+- here are some integrated fingerprint Reader in [www.thinkwiki.org](https://www.thinkwiki.org/wiki/Integrated_Fingerprint_Reader)
 
 |USB ID|Reader|Software|
 |---|---|---|
@@ -21,16 +23,17 @@ lsusb
 |138a:0017|Validity Sensors, Inc.|Fingerprint Reader	(to test) Driver Patch as use case with T440 or gist sample Supported by libfprint v0.6.0|
 |**138a:0090**|Validity Sensors|RE work for validity90 fingerprint reader|
 
-## 2.Install packages
+## 2.Install packages(two methods)
 
-- 2.1 Packages for [Fingerprint GUI](http://www.ullrich-online.cc/fingerprint/) for Ubuntu 14.04, 16.04, 17.10, 18.04 and any distribution based thereupon
+- 2.1 Fingerprint GUI for Ubuntu 14.04, 16.04, 17.10 and any distribution based thereupon
+  - you can download the `fingerprint-gui-1.09.tar.gz` in repository or find the release packages in [www.ullrich-online.cc]((http://www.ullrich-online.cc/fingerprint/))
   - **! check if your device is in [supported readers](https://launchpad.net/~fingerprint/+archive/ubuntu/fingerprint-gui) then install**
 
 ---
 
 - 2.2 Install fprintd (for me in device 138a:0090)
 
-  - read the guide: [Validity](https://github.com/nmikhailov/Validity90) and [libfprint](https://github.com/3v1n0/libfprint) in github
+  - read the guide: [Validity90](https://github.com/nmikhailov/Validity90) and [libfprint](https://github.com/3v1n0/libfprint) in github
 
   - for ubuntu/linuxmint
 
